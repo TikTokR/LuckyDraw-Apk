@@ -124,8 +124,71 @@ public class MainActivity extends AppCompatActivity {
                         resetLuckyDraw();
                     }
                 })
-                .show();
+                
+res/layouts/main_activity.xml
 
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Name" />
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Phone Number" />
+
+    <EditText
+        android:id="@+id/etAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Investment Amount (Rs.1 - Rs.10)"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/etScreenshot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Screenshot Link (Manual Verification)" />
+
+    <Button
+        android:id="@+id/btnInvest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Invest Now" />
+
+    <TextView
+        android:id="@+id/tvTotalAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Invested Amount: Rs. 0"
+        android:textSize="18sp"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/btnShowWinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Lucky Draw Winner" />
+
+    <TextView
+        android:id="@+id/tvWinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Winner: TBD"
+        android:textSize="18sp"
+        android:padding="10dp" />
+
+</LinearLayout>
         tvWinner.setText("Winner: " + winner + " (Prize: Rs. " + winnerPrize + ")");
     }
 
@@ -138,3 +201,4 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "New Lucky Draw Started!", Toast.LENGTH_SHORT).show();
     }
 }
+
